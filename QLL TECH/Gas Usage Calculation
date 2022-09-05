@@ -1,0 +1,7 @@
+// gasCost (Ether) = gasPrice * min(gasCost,gaslimit)
+
+gasCost = is the sum of the gas cost of all the opcodes and this is calculated by the EVM.
+
+gasPrice = is the amount of ether you're willing to pay for each unit of gas which can be freely set by the person initiating the transaction.
+
+gaslimit = is the maximum amount of gas a person is willing to pay in order to perform a transaction across the ethereum network.

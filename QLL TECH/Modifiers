@@ -1,0 +1,27 @@
+// Modifiers are used to execute the behavior of a function. They can be called before or after a function is excuted
+// Modifiers are used to protect against hacks
+// They help in accessing restrictions
+// It is used to implementing accuracy checks 
+
+pragma solidity ^0.6.0;
+
+contract qTech {
+
+    address owner;
+    uint256 name;
+
+    constructor() public {
+        owner = msg.sender;
+    }
+
+    modifier isOwner() {
+        require(msg.sender == owner, "sender must be the owner");
+
+        _;
+    }
+
+    function setName(uint _name) public isOwner {
+        name = _name;
+    }
+
+}
